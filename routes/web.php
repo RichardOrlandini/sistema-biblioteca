@@ -1,8 +1,12 @@
 <?php
 
-use App\Http\Controllers\BooksController;
 use Illuminate\Support\Facades\Route;
+
+use App\Http\Controllers\BooksController;
 use App\Models\Book;
+
+use App\Models\People;
+use App\Http\Controllers\PeopleController;
 
 /*
 Route::get('/books', [BooksController::class, ' index']);
@@ -24,6 +28,15 @@ Route::prefix('books')->group(function(){
     Route::delete('/{id}', [BooksController::class, 'destroy'])->where('id', '[0-9]+')->name('books-destroy');
 });
 
+
+Route::prefix('people')->group(function(){ 
+    Route::get('/', [PeopleController::class, 'index'])->name('people-index');
+    Route::get('/create', [PeopleController::class, 'create'])->name('people-create');
+    Route::post('/', [PeopleController::class, 'store'])->name('people-store');
+    Route::get('/{id}/edit', [PeopleController::class, 'edit'])->name('people-edit');
+    Route::put('/{id}', [PeopleController::class, 'update'])->where('id', '[0-9]+')->name('people-update');
+    Route::delete('/{id}', [PeopleController::class, 'destroy'])->where('id', '[0-9]+')->name('people-destroy');
+});
 
 
 Route::get('/', function () {

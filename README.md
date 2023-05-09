@@ -18,18 +18,18 @@ artisan: diversos comandos
 
 php artisan list -> lista todos os comandos.
 
-criando um controller com artisan:
+criando um controller com artisan: - php artisan make:controller People 
 criando migrations: criar:
-- php artisan make:migration create_books_table
+- php artisan make:migration create_books_table  create_people_table
 rodar: 
 - php artisan migrate
 criando model:
-- php artisan make:model Book
+- php artisan make:model People 
 
 
 
 tebelas:
-
+php artisan migrate:reset  - reverte todas as migrações
 books_gender : $table->string('Aventure',55)->default('Adventure');
 books_gender : $table->string('Fantasy',55);
 
