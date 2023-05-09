@@ -9,14 +9,20 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
+
+    
+    //
     public function up(): void
     {
         Schema::create('books', function (Blueprint $table) {
             $table->id();
             $table->string('name',55);
             $table->string('author',55);
-            $table->year('year_of_creation');
             $table->double('value',8,2);
+            $table->string('gender',55);
+            $table->boolean('status')->default(false);
+            $table->foreignId('people_id')->nullable();
+
             $table->timestamps();
         });
     }

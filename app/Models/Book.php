@@ -14,5 +14,6 @@ class Book extends Model
         'author',
         'year_of_creation',
         'value',
+        'gender',
     ];
 }

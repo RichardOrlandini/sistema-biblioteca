@@ -29,6 +29,7 @@ criando model:
 
 
 tebelas:
+-php artisan migrate:refresh : da um refresh em todas migrations
 php artisan migrate:reset  - reverte todas as migrações
 books_gender : $table->string('Aventure',55)->default('Adventure');
 books_gender : $table->string('Fantasy',55);

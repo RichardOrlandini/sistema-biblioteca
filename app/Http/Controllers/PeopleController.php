@@ -35,6 +35,7 @@ class PeopleController extends Controller {
 
 
     public function update( Request $request, $id){
+      
         $data = [
             'name' => $request->name,
             'email' => $request->email,

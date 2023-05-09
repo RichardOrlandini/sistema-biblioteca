@@ -13,4 +13,10 @@ class People extends Model
         'name',
         'email',
     ];
+
+    protected $table = "peoples";
+
+    public function hasBook(){
+        return $this->hasMany(Book::class, 'book_id');
+    }
 }

@@ -19,6 +19,7 @@ class BooksController extends Controller {
     }
 
     public function store(Request $request){
+        
        Book::create($request->all());
        return redirect()->route('books-index');
     }
@@ -35,11 +36,14 @@ class BooksController extends Controller {
 
 
     public function update( Request $request, $id){
+        //$gender = $request->gender;
+        //dd($gender);
+
         $data = [
             'name' => $request->name,
             'author' => $request->author,
             'value' => $request->value,
-            'year_of_creation' => $request->year_of_creation,
+            'gender' => $request->gender,
         ];
 
         Book::where('id', $id)->update($data);

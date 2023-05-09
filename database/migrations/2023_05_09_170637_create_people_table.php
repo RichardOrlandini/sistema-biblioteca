@@ -9,9 +9,11 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
+
+      //$table->foreignId('book_id')->constrained('book')->nullable();
     public function up(): void
     {
-        Schema::create('people', function (Blueprint $table) {
+        Schema::create('peoples', function (Blueprint $table) {
             $table->id();
             $table->string('name',55);
             $table->string('email',55);
