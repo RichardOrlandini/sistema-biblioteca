@@ -13,8 +13,9 @@
     </div>
 
     <div class="col-sm-2"> 
-        <a href="{{route('books-create')}}" class="btn btn-success" >Novo Livro</a>
+        <a href="{{route('books-create')}}" class="btn btn-info" >Novo Livro</a>
     </div>
+
 </div>
 
         <table class="table">

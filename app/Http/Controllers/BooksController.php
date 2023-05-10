@@ -25,10 +25,10 @@ class BooksController extends Controller {
     }
 
     public function edit($id){
-        $books = Book::where('id', $id)-> first();
+        $book = Book::where('id', $id)-> first();
 
-        if(!empty($books)){
-            return view('books.edit', ['books' => $books]);
+        if(!empty($book)){
+            return view('books.edit', ['book' => $book]);
         } else {
             return redirect()->route('books-index');
         }

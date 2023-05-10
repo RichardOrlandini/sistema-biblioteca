@@ -19,4 +19,8 @@ class People extends Model
     public function hasBook(){
         return $this->hasMany(Book::class, 'book_id');
     }
+
+    public function loans() {
+        return $this->hasMany(Loan::class, "loan_id");
+    }
 }

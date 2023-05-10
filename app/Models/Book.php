@@ -16,4 +16,12 @@ class Book extends Model
         'value',
         'gender',
     ];
+
+
+    public function people()
+    {
+        //return $this->hasOne('Peoples','id','people_id');
+        return $this->hasOne('People');
+
+    }
 }

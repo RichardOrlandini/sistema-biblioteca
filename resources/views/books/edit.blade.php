@@ -7,24 +7,24 @@
     <div class="container mt-5">
         <h1>Editar Livro</h1>
         <hr>
-        <form action=" {{ route('books-update', ['id'=> $books->id]) }} " method="POST">
+        <form action=" {{ route('books-update', ['id'=> $book->id]) }} " method="POST">
             @csrf
             @method('PUT')
             <div class="form-group">
                 <div class="form-group">
                     <label for="name">Nome:</label>
-                    <input type="text" class="form-control" name="name" value="{{$books->name}}" placeholder="Digite o nome do livro">
+                    <input type="text" class="form-control" name="name" value="{{$book->name}}" placeholder="Digite o nome do livro">
                 </div>
 
                 <div class="form-group">
                     <label for="author">Author:</label>
-                    <input type="text" class="form-control" name="author" value="{{$books->author}}"  placeholder="Digite o nome do autor">
+                    <input type="text" class="form-control" name="author" value="{{$book->author}}"  placeholder="Digite o nome do autor">
                 </div>
 
 
                 <div class="form-group">
                     <label for="value">Valor:</label>
-                    <input type="number" class="form-control" name="value" value="{{$books ->value}}" placeholder="Digite o valor do livro">
+                    <input type="number" class="form-control" name="value" value="{{$book ->value}}" placeholder="Digite o valor do livro">
                 </div>
 
 

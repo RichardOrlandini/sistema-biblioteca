@@ -8,16 +8,19 @@ use App\Models\Book;
 use App\Models\People;
 use App\Http\Controllers\PeopleController;
 
-/*
-Route::get('/books', [BooksController::class, ' index']);
 
-Route::get('/home', function () {
+use App\Models\Loan;
+use App\Http\Controllers\LoanController;
+
+Route::fallback( function () {
+    return "Erro ao localizar a rota";
+});
+
+Route::get('/', function () {
     return view('welcome');
-})->name('home-index');
- 
-*/
+});
 
-//grupo de rotas
+
 
 Route::prefix('books')->group(function(){ 
     Route::get('/', [BooksController::class, 'index'])->name('books-index');
@@ -27,7 +30,6 @@ Route::prefix('books')->group(function(){
     Route::put('/{id}', [BooksController::class, 'update'])->where('id', '[0-9]+')->name('books-update');
     Route::delete('/{id}', [BooksController::class, 'destroy'])->where('id', '[0-9]+')->name('books-destroy');
 });
-
 
 Route::prefix('people')->group(function(){ 
     Route::get('/', [PeopleController::class, 'index'])->name('people-index');
@@ -39,13 +41,11 @@ Route::prefix('people')->group(function(){
 });
 
 
-Route::get('/', function () {
-    return view('welcome');
+Route::prefix('loans')->group(function(){ 
+    Route::get('/', [LoanController::class, 'index'])->name('loans-index');
+    Route::get('/create', [LoanController::class, 'create'])->name('loans-create');
+    Route::post('/', [LoanController::class, 'store'])->name('loans-store');
+    Route::get('/{id}/edit', [LoanController::class, 'edit'])->name('loans-edit');
+    Route::put('/{id}', [LoanController::class, 'update'])->where('id', '[0-9]+')->name('loans-update');
+    Route::delete('/{id}', [LoanController::class, 'destroy'])->where('id', '[0-9]+')->name('loans-destroy');
 });
-
-Route::fallback( function () {
-    return "Erro ao localizar a rota";
-});
-
-
-

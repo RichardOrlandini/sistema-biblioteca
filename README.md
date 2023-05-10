@@ -18,13 +18,13 @@ artisan: diversos comandos
 
 php artisan list -> lista todos os comandos.
 
-criando um controller com artisan: - php artisan make:controller People 
+criando um controller com artisan: - php artisan make:controller Loan 
 criando migrations: criar:
-- php artisan make:migration create_books_table  create_people_table
+- php artisan make:migration create_loans_table
 rodar: 
 - php artisan migrate
 criando model:
-- php artisan make:model People 
+- php artisan make:model Loan 
 
 
 

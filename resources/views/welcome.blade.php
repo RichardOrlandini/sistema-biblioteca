@@ -1,12 +1,11 @@
 @extends('layouts.app')
 
 
-@section('title', 'Welcome')
+@section('title', 'Listing')
 @section('content')
-   
-    <div class="container mt-5">
-        <h1>Seja bem vindo a biblioteca</h1>
-       
+
+    <div class="container mt-5 " > 
+    <h1>Welcome</h1>
+
     </div>
-       
 @endsection()
