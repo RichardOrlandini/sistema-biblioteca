@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <title>@yield('title') - Biblioteca</title>
+    <style>body{background-color: #DCDCDC;}</style>
+
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary"> 
@@ -27,6 +29,8 @@
         </ul>  
         </div>
     </nav>
+
+    
 
     @yield('content')
 </body>

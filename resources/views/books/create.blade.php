@@ -9,7 +9,7 @@
     
         <h1>Adicione um novo Livro</h1>
         <hr>
-        <form action=" {{ route('books-store') }} " method="POST">
+        <form action=" {{ route('books-store') }} " method="POST" name="check_form">
             @csrf
             <div class="form-group">
                 <div class="form-group">
@@ -30,7 +30,7 @@
 
                 <div class="input-group mb-3">
                         <select name="gender" class="custom-select" id="inputGroupSelect02">
-                            <option selected>Gênero...</option>
+                            <option selected value="1">Gênero...</option>
                             <option value="romance">Romance</option>
                             <option value="fantasia">Fantasia</option>
                             <option value="aventura">Aventura</option>
@@ -41,10 +41,44 @@
                 </div>
 
                 <div class="form-group">
-                    <input type="submit" name="submit" class="btn btn-primary">
+                    <button onclick="return validador()" value="Criar" class="btn  btn-primary" >Criar</button>
                 </div>
             </div>
         </form>
     </div>
+
+
+    <script>
+        function validador(){
+            let name = check_form.name.value;
+            let author = check_form.author.value;
+            let value = check_form.value.value;
+            let gender = check_form.gender.value;
+
+            if (name == ""){
+                alert("Prencha o campo Nome")
+                return false;
+            }
+
+            if (author == ""){
+                alert("Prencha o campo Autor")
+                return false;
+            }
+
+            if (value == ""){
+                alert("Prencha o campo Valor")
+                return false;
+            }
+
+            if (gender == "" || gender == "1"){
+                alert("Prencha o campo Gênero")
+                return false;
+            }
+
+            document.forms["check_form"].submit()
+        }
+    </script>  
+
+
        
 @endsection()

@@ -61,7 +61,7 @@
         </form>
     </div>
        
-
+   
     <script>
         function validador(){
             let return_date = check_form.return_date.value;

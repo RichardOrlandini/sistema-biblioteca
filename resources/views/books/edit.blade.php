@@ -7,7 +7,7 @@
     <div class="container mt-5">
         <h1>Editar Livro</h1>
         <hr>
-        <form action=" {{ route('books-update', ['id'=> $book->id]) }} " method="POST">
+        <form action=" {{ route('books-update', ['id'=> $book->id]) }} " method="POST" name="check_form">
             @csrf
             @method('PUT')
             <div class="form-group">
@@ -41,10 +41,42 @@
                 </div>
 
                 <div class="form-group">
-                    <input type="submit" name="submit" class="btn btn-success" value="Atualizar">
+                     <button onclick="return validador()" value="Atualizar" class="btn btn-success" >Atualizar</button>
                 </div>
             </div>
         </form>
     </div>
+
+
+    <script>
+        function validador(){
+            let name = check_form.name.value;
+            let author = check_form.author.value;
+            let value = check_form.value.value;
+            let gender = check_form.gender.value;
+
+            if (name == ""){
+                alert("Prencha o campo Nome")
+                return false;
+            }
+
+            if (author == ""){
+                alert("Prencha o campo Autor")
+                return false;
+            }
+
+            if (value == ""){
+                alert("Prencha o campo Valor")
+                return false;
+            }
+
+            if (gender == ""){
+                alert("Prencha o campo Gênero")
+                return false;
+            }
+
+            document.forms["check_form"].submit()
+        }
+    </script>  
        
 @endsection()
