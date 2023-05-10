@@ -30,7 +30,7 @@
 
                 <div class="input-group mb-3">
                         <select name="gender" class="custom-select" id="inputGroupSelect02">
-                            <option selected value=" {{$books ->gender}} ">Gênero...</option>
+                            <option selected value="{{$book->gender}}">Gênero atual: {{$book->gender}}</option>
                             <option value="romance">Romance</option>
                             <option value="fantasia">Fantasia</option>
                             <option value="aventura">Aventura</option>
@@ -41,7 +41,7 @@
                 </div>
 
                 <div class="form-group">
-                     <button onclick="return validador()" value="Atualizar" class="btn btn-success" >Atualizar</button>
+                     <button onclick="return validador()" value="Atualizar" class="btn btn-info" >Atualizar</button>
                 </div>
             </div>
         </form>

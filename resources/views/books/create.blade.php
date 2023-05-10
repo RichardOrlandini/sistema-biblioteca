@@ -41,7 +41,7 @@
                 </div>
 
                 <div class="form-group">
-                    <button onclick="return validador()" value="Criar" class="btn  btn-primary" >Criar</button>
+                    <button onclick="return validador()" value="Criar" class="btn btn-info" >Criar</button>
                 </div>
             </div>
         </form>

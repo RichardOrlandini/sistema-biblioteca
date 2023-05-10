@@ -44,9 +44,10 @@
 
                 <div class="input-group mb-3">
                         <select name="delay" class="custom-select" id="inputGroupSelect02">
-                            <option selected value="{{$delay}}"> {{$delay}}</option>
+                            <option selected value="{{$delay}}">Status Atual: {{$delay}}</option>
                             <option value="atrasado">Atrasado</option>
                             <option value="devolvido">Devolvido</option>
+                            <option value="a prazo">A prazo</option>
                         </select>
                     <div class="input-group-append">
                         <label class="input-group-text" for="inputGroupSelect02">Opções</label>
@@ -55,7 +56,6 @@
 
                 <div class="form-group">
                     <button onclick="return validador()" value="Atualizar" class="btn btn-success" >Atualizar</button>
-                   <!-- <input type="submit" name="submit" class="btn btn-success" value="Atualizar"> -->
                 </div>
             </div>
         </form>
