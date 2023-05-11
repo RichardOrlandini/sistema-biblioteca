@@ -16,7 +16,7 @@
 - php artisan serve
 - Abrir o projeto na web com o end-point gerado.
 
-obs: Script para criação de massa: 
+obs: Script para criação de massa: https://github.com/RichardOrlandini/sistema-biblioteca/blob/main/massas.txt
 
 ## Funcionalidades:
 
