@@ -1,0 +1,11 @@
+use db_book;
+INSERT INTO `db_book`.`peoples` (`name`, `email`, `created_at`, `updated_at`) VALUES ('Teste', 'teste.com@teste', '2023-05-11 00:45:40', '2023-05-11 00:45:40');
+INSERT INTO `db_book`.`peoples` (`name`, `email`, `created_at`, `updated_at`) VALUES ('Teste123', 'teste123.com@teste', '2023-05-11 00:45:40', '2023-05-11 00:45:40');
+INSERT INTO `db_book`.`books` (`name`, `author`, `value`, `gender`, `status`,  `created_at`, `updated_at`) VALUES ('Dom Quixote', 'Miguel de Cervantes', '20.00', 'aventura', '1',  '2023-05-11 00:51:07', '2023-05-11 00:53:16');
+INSERT INTO `db_book`.`books` (`name`, `author`, `value`, `gender`, `status`,  `created_at`, `updated_at`) VALUES ('Pequeno Principe', 'Antoine de Saint-Exupéry', '60.00', 'fantasia', '1',  '2023-05-11 00:51:07', '2023-05-11 00:53:16');
+INSERT INTO `db_book`.`loans` (`loan_date`, `return_date`, `book_id`, `people_id`, `delay`, `created_at`, `updated_at`) VALUES ('2023-05-10', '2023-05-20', '1', '1', 'a prazo', '2023-05-11 00:52:09', '2023-05-11 00:52:09');
+INSERT INTO `db_book`.`loans` (`loan_date`, `return_date`, `book_id`, `people_id`, `delay`, `created_at`, `updated_at`) VALUES ('2023-05-09', '2023-05-15', '2', '2', 'a prazo', '2023-05-11 00:52:09', '2023-05-11 00:52:09');
+
+SELECT * FROM books;
+SELECT * FROM peoples;
+SELECT * FROM loans;

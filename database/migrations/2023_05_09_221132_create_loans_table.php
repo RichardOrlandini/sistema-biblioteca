@@ -17,12 +17,11 @@ return new class extends Migration
             $table->date('loan_date');
             $table->date('return_date');
             
-            $table->foreignId('book_id')->nullable();
-            $table->foreignId('people_id')->nullable();
+            $table->foreignId('book_id');
+            $table->foreignId('people_id');
             $table->string('delay')->default("a prazo");
 
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 

@@ -21,7 +21,6 @@ return new class extends Migration
             $table->double('value',8,2);
             $table->string('gender',55);
             $table->boolean('status')->default(false);
-            $table->foreignId('people_id')->nullable();
 
             $table->timestamps();
         });

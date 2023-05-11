@@ -33,7 +33,7 @@
 
                 <div class="input-group mb-3">
                         <select name="status" class="custom-select" id="inputGroupSelect02">
-                            <option selected value="{{$statusValue}}"> {{$status}}</option>
+                            <option selected value="{{$statusValue}}">Status Atual: {{$status}}</option>
                             <option value="1">Deixar como Emprestado</option>
                             <option value="0">Deixar como Disponível</option>
                         </select>
