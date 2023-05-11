@@ -22,16 +22,16 @@ obs: Script para criação de massa:
 
 ### - Tela Home (Funcionalidades) 
 - navegação para as demais paginas.
-![Tela home](https://github.com/RichardOrlandini/sistema-biblioteca/imgs/home.png)
+![Tela home](https://github.com/RichardOrlandini/sistema-biblioteca/blob/main/imgs/home.png))
 
 ### - Tela Livros (Funcionalidades) 
 CRUD completo de Livros.
-![Tela home](https://github.com/RichardOrlandini/sistema-biblioteca/imgs/livros.png)
+![Tela home](https://github.com/RichardOrlandini/sistema-biblioteca/blob/main/imgs/livros.png)
 ### - Tela Usúarios (Funcionalidades) 
 CRUD completo de Usúarios.
-![Tela home](https://github.com/RichardOrlandini/sistema-biblioteca/imgs/usuarios.png)
+![Tela home](https://github.com/RichardOrlandini/sistema-biblioteca/blob/main/imgs/usuarios.png)
 ### - Tela Empréstimos (Funcionalidades) 
 CRUD completo de Empréstimos.
 - Funcionalidade de mudar a data de devolução.
 - Funcionalidade de marcar o emprestimo como Atrasado, Devolvido ou manter como A prazo.
-- ![Tela home](https://github.com/RichardOrlandini/sistema-biblioteca/imgs/emprestimos.png)
+- ![Tela home](https://github.com/RichardOrlandini/sistema-biblioteca/blob/main/imgs/emprestimos.png)
