@@ -15,8 +15,18 @@
 - php artisan migrate
 - php artisan serve
 - Abrir o projeto na web com o end-point gerado.
+- renomear o arquivo .env.example para : .env
+- Configurações do mysql no arquivo .env:
+- 
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=db_book
+DB_USERNAME=root
+DB_PASSWORD=123
 
-obs: Script para criação de massa: https://github.com/RichardOrlandini/sistema-biblioteca/blob/main/massas.txt
+- (A senha deve ser a que você colocou no seu servidor, a minha no caso é 123).
+- obs: Script para criação de massa: https://github.com/RichardOrlandini/sistema-biblioteca/blob/main/massas.txt
 
 ## Funcionalidades:
 
