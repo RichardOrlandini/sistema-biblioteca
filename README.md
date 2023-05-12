@@ -6,11 +6,12 @@
   https://windows.php.net/downloads/releases/php-8.2.6-Win32-vs16-x64.zip
 - Clonar o projeto.
     1° Clone no link do github acima.
+    
     2° Extrair o arquivo.
+    
     3° entrar na pasta do arquivo e abrir seu editor de texto com terminal.
-    4° abrir um servidor como xampp ou MySQL Workbench e criar a database do projeto, comando para criar:
-    5° create database db_book;
-    6º:
+    
+    4º:
     - renomear o arquivo .env.example para : .env
 - Configurações do mysql no arquivo .env: - (A senha deve ser a que você colocou no seu servidor, a minha no caso é 123).
 - 
