@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Loan;
 use App\Models\Book;
+use App\Models\People; 
 
 class LoanController extends Controller{
 
@@ -22,8 +23,15 @@ class LoanController extends Controller{
     public function store(Request $request) {
         //NOTE: Changing book status.
         $book = Book::find($request->book_id);
+        $people = People::find($request->people_id); 
 
-        if($book == null) return redirect()->route('loans-create');
+        if($book == null){
+            $msg = "O id do livro não existe";
+            return view('loans.create')->with('msg', $msg); 
+        } else if ($people == null){
+            $msg = "O id da pessoa não existe";
+            return view('loans.create')->with('msg', $msg); 
+        }
 
         $book->status = $request->status;
         $book->save();

@@ -7,10 +7,13 @@
     <div class="container mt-5">
     <h1>Cadastre um novo Empréstimo</h1>
        
+        
+        @isset($msg)
         <div class="alert alert-danger" role="alert">
-            Se os Números de Registros não existirem, a pagina será recarregada!
+            {{$msg}}
         </div>
         
+        @endisset
         <hr>
         <form action=" {{ route('loans-store') }} " method="POST" name="check_form">
             @csrf
