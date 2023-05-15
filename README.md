@@ -21,6 +21,8 @@ DB_PORT=3306
 DB_DATABASE=db_book
 DB_USERNAME=root
 DB_PASSWORD=123
+
+- 5º crie a database no seu sgbd mysql: create database db_book;
 ------------------------------------------------------------------------
 - Comandos para rodar o projeto (abra o terminal na raiz da pasta do projeto):
 - - composer install
